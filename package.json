@@ -2,6 +2,7 @@
     "name": "2048-game",
     "version": "0.0.1",
     "devDependencies": {
-        "mocha": "1.18.x"
+        "mocha": "1.18.x",
+        "jshint": "2.4.x"
     }
 }
