@@ -1,5 +1,4 @@
 var assert = require('chai').assert;
-var each = require('underscore').each; // TODO: Replace with native .each()
 var flatten = require('underscore').flatten;
 var zip = require('underscore').zip;
 var partial = require('underscore').partial;
@@ -29,7 +28,7 @@ exports.makeMove = function (board, move) {
 function assertValidBoard(board) {
     assert.isArray(board);
     assert.lengthOf(board, 16);
-    each(board, assert.isNumber);
+    board.forEach(assert.isNumber);
 }
 
 function assertValidMove(move) {
