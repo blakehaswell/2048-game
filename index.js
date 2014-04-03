@@ -91,3 +91,17 @@ function foldValues(inverted, boardArray) {
         return rows;
     });
 }
+
+exports.insertRandomValue = function (b) {
+    var board = b.slice(0); // Create a copy of the board array.
+    assertValidBoard(board);
+    assert.include(board, 0);
+    while (true) {
+        var index = Math.round(Math.random() * 15);
+        if (board[index] === 0) {
+            board[index] = 2;
+            break;
+        }
+    }
+    return board;
+};
